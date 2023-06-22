@@ -57,7 +57,7 @@ import shutil
 
 
 #x= 1
-##z = "3"
+#z = "3"
 
 #y = int(y)
 #z = int(z)
@@ -237,6 +237,8 @@ import math
 #food.clear()
 #for x in food:
    # print(x)
+matrix = [0,1,2,] , [3,4,5]
+
 
 
 #### 2D LISTS
@@ -692,6 +694,7 @@ import math
 # O O P
 
 #from car import Car
+
 
 #car_1 = Car("chevy", "corvette", 2021, "black")
 #car2 = Car("ford", "mustang", 21, "blakk")
@@ -1757,6 +1760,7 @@ from tkinter import filedialog
 
 #window = Tk()
 
+
 #percent = StringVar()
 #text = StringVar()
 #bar = Progressbar(window,orient=HORIZONTAL,length=300)
@@ -1786,4 +1790,233 @@ from tkinter import filedialog
 
 #window.mainloop()
 
-print("this is a test")
+
+# key Events
+#from tkinter import *
+#def dosomething(event):
+ ##  label.config(text=event.keysym)
+
+#window = Tk()
+
+#window.bind("<Key>",dosomething)
+
+#label = Label(window,font=("Halvetica",100))
+#label.pack()
+
+#window.mainloop()
+
+#from tkinter import *
+
+# Mouse EVents
+#def dosomething(event):
+    #print("Mouse coordinates: " + str(event.x)+ str(event.y))
+#window = Tk()
+
+#window.bind("<Button-1>",dosomething)
+#window.bind("<Button-2>",dosomething)
+#window.bind("<Button-3>",dosomething)
+#window.bind("<ButtonRelease>",dosomething)
+#window.bind("<Enter>",dosomething)
+#window.bind("<Leave>",dosomething)
+#window.bind("<Motion>",dosomething)
+#window.mainloop()
+
+
+# Dragging and dropping widgets in python
+#from tkinter import *
+
+#def dragstart(event):
+   # widget = event.widget
+   # widget.startX = event.x
+   # widget.startY = event.y
+
+#def dragmotion(event):
+    #widget = event.widget
+    #x = widget.winfo_x() - widget.startX + event.x
+   # y = widget.winfo_y() - widget.startY + event.y
+   # widget.place(x=x,y=y)
+
+#window = Tk()
+
+#label = Label(window, bg="pink", width=10, height=5)
+#label.place(x=0, y=0)
+
+#label2 = Label(window, bg="grey", width=10, height=5)
+#label2.place(x=100, y=100)
+
+
+#label.bind("<Button-1>",dragstart)
+#label.bind("<B1-Motion>",dragmotion)
+
+#label2.bind("<Button-1>",dragstart)
+#label2.bind("<B1-Motion>",dragmotion)
+
+#window.mainloop()
+
+from tkinter import *
+
+#def moveup (event):
+  #  label.place(x=label.winfo_x(), y=label.winfo_y()-10)
+
+#def movedown(event):
+  #  label.place(x=label.winfo_x(), y=label.winfo_y()+10)
+
+#def moveleft (event):
+   # label.place(x=label.winfo_x()-10, y=label.winfo_y())
+
+#def moveright (event):
+   # label.place(x=label.winfo_x()+10, y=label.winfo_y())
+
+#window = Tk()
+#window.geometry("800x800")
+
+#window.bind("<w>",moveup)
+#window.bind("<s>",movedown)
+#window.bind("<a>",moveleft)
+#window.bind("<d>",moveright)
+#window.bind("<Up>",moveup)
+#window.bind("<Down>",movedown)
+#window.bind("<Left>",moveleft)
+#window.bind("<Right>",moveright)
+
+
+#myimage = PhotoImage(file='racecarr.png')
+#label= Label(window, image=myimage)
+#label.place(x=0,y=0)
+
+#window.mainloop()
+
+
+#def moveup (event):
+ #   canvas.move(myimage,0,-10)
+#def movedown(event):
+ #   canvas.move(myimage, 0, 10)
+
+#def moveleft(event):
+ #   canvas.move(myimage, -10, 0)
+#def moveright(event):
+#   canvas.move(myimage, 10, 0)
+
+#window = Tk()
+
+#window.bind("<w>",moveup)
+#window.bind("<s>",movedown)
+#window.bind("<a>",moveleft)
+#window.bind("<d>",moveright)
+#window.bind("<Up>",moveup)
+#window.bind("<Down>",movedown)
+#window.bind("<Left>",moveleft)
+#window.bind("<Right>",moveright)
+
+
+
+#canvas = Canvas(window,width=800,height=800)
+#canvas.pack()
+
+#photoimage = PhotoImage(file='racecarr.png')
+#myimage = canvas.create_image(0,0,image=photoimage,anchor=NW)
+
+#window.mainloop()
+
+import time
+
+
+#WIDTH = 600
+#HEIGHT = 600
+
+#xspeed = 1.5
+#yspeed = 2
+
+#window = Tk()
+
+#canvas = Canvas(window, width=WIDTH, height=HEIGHT,bg='silver')
+#canvas.pack()
+
+#bgphoto = PhotoImage(file='roadie.png')
+#background = canvas.create_image(0,0,image=bgphoto,anchor=NW)
+
+
+#photoimage = PhotoImage(file='racecarr.png')
+#myimage = canvas.create_image(0,0,image=photoimage,anchor=NW)
+
+
+#imagewidth = photoimage.width()
+#imageheight = photoimage.height()
+
+#while True:
+    #coordinates = canvas.coords(myimage)
+    #print(coordinates)
+    #if(coordinates[0]>=(WIDTH-imagewidth) or coordinates[0]<0):
+        #xspeed = -xspeed
+    #if (coordinates[1] >= (HEIGHT - imageheight) or coordinates[1] < 0):
+       # yspeed = -yspeed
+    #canvas.move(myimage,xspeed,yspeed)
+    #window.update()
+    #time.sleep(0.01)
+
+
+#window.mainloop()
+
+# Animating multiple objects
+
+#from tkinter import *
+#from Ball import *
+#from Rect import *
+#import time
+
+#window = Tk()
+
+#WIDTH = 500
+#HEIGHT = 500
+
+#canvas = Canvas(window, width=WIDTH,height=HEIGHT)
+#canvas.pack()
+
+#volleyball = Ball(canvas,0,0,80,1.5,2.5,"white")
+#tennisball = Ball(canvas,0,0,50,4,3,"green")
+#basketball = Ball(canvas,0,0,100,3,4,"orange")
+
+#newrect = Rect(canvas,0,0,30,40,1.2,2.6,"pink")
+
+#while True:
+#    volleyball.move()
+ #   tennisball.move()
+  #  basketball.move()
+   # newrect.move()
+    #window.update()
+    #time.sleep(0.01)
+
+#window.mainloop()
+
+#  Clock program
+
+from tkinter import *
+from time import *
+
+def update():
+    timestring = strftime("%I:%M:%S %p")
+    timelabel.config(text=timestring)
+
+    daystring = strftime("%A")
+    daylabel.config(text=daystring)
+
+    datestring = strftime("%d %B, %Y")
+    datelabel.config(text=datestring)
+
+    window.after(1000,update)
+
+
+window = Tk()
+
+timelabel = Label(window,font=("Arial",50),fg="black",bg="white")
+timelabel.pack()
+
+daylabel = Label(window,font=("Ink Free",25))
+daylabel.pack()
+
+datelabel = Label(window,font=("Ink Free",30))
+datelabel.pack()
+
+update()
+
+window.mainloop()
