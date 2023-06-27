@@ -3,6 +3,7 @@ import random
 
 characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
+
 def generate_password():
     password_length = int(input("how long would you like the password to be?"))
 
